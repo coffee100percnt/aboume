@@ -1,11 +1,14 @@
 body {
-    background-color: #202030;
+    /* background-color: #202030; */
+    background: url("/bg.jpg") center;
+    background-attachment: fixed;
     color: aliceblue;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
     
 }
 .main {
-    background-color: #303048;
+    background-color: rgba(0,0,0, 0);
     padding: 15px;
     max-width: max-content;
     width: 75%;
@@ -19,18 +22,21 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    backdrop-filter: blur(100px);
 }
 
 h1, h2, h3, h4, h5, h6, p {
     margin:10px
 }
 
-h1 {
+h1, .header {
     font-size: 35px;
+    font-weight: bold;
 }
 img {
     margin-bottom: -5px;
     border-radius: 100%;
+    margin-right: 10px;
 }
 
 .social-icons {
