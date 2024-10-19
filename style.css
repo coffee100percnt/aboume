@@ -14,10 +14,9 @@ body {
     max-width: max-content;
     width: 75%;
     margin-top: 50vh;
-    margin-left: 50vw;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(0,-50%);
     border-radius: 25px;
     display:flex;
     align-items: center;
@@ -56,8 +55,9 @@ i {
 }
 .footer {
     position: absolute;
+    top: 95vh;
     left: 50vw;
-    top: 100vh;
+    transform: translate(-50%,-100%);
     background-color: rgba(0,0,0, 0);
     padding: 5px;
     backdrop-filter: blur(30px) brightness(80%);
@@ -65,8 +65,8 @@ i {
     border-width: 2px;
     border-style:solid;
     border-radius: 15px;
-    transform: translate(-50%, -150%);
     z-index: -1;
+    width: max-content;
 }
 
 .footertext {
