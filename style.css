@@ -58,8 +58,6 @@ i {
     position: absolute;
     left: 50vw;
     top: 100vh;
-    max-width: fit-content;
-    text-align: center;
     background-color: rgba(0,0,0, 0);
     padding: 5px;
     backdrop-filter: blur(30px) brightness(80%);
@@ -69,6 +67,11 @@ i {
     border-radius: 15px;
     transform: translate(-50%, -150%);
     z-index: -1;
+}
+
+.footertext {
+    max-width: fit-content;
+    text-align: center;
     font-size: small;
 }
 
