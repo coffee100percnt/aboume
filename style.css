@@ -26,7 +26,7 @@ body {
     border-color: rgba(255, 255, 255, 0.2);
     border-width: 2px;
     border-style:solid;
-    backdrop-filter: blur(100px) brightness(80%);
+    backdrop-filter: blur(30px) brightness(80%);
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -53,4 +53,31 @@ i {
     font-size: 30px;
     color: aliceblue;
     margin:10px
+}
+.footer {
+    position: absolute;
+    left: 50vw;
+    top: 100vh;
+    max-width: fit-content;
+    text-align: center;
+    background-color: rgba(0,0,0, 0);
+    padding: 10px;
+    backdrop-filter: blur(30px) brightness(80%);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-width: 2px;
+    border-style:solid;
+    border-radius: 20px;
+    transform: translate(-50%, -150%);
+    z-index: -1;
+    font-size: small;
+}
+
+.srclink {
+    color: #aaa;
+}
+.srclink:visited {
+    color: #aaa;
+}
+.srclink:active {
+    color: #ccc;
 }
