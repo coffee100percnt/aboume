@@ -46,7 +46,7 @@ img {
 .social-icons {
     display: flex;
     flex-direction: row;
-
+    flex-wrap: wrap;
 }
 i {
     font-size: 30px;
