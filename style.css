@@ -49,10 +49,14 @@ img {
     flex-wrap: wrap;
     justify-content: center
 }
-i {
+i.fa-brands, i.fa-solid {
     font-size: 30px;
     color: aliceblue;
-    margin:10px
+    margin:10px;
+    transition: all 0.2s ease-out;
+}
+i.fa-brands:hover, i.fa-solid:hover {
+    transform: scale(1.2);
 }
 .footer {
     position: absolute;
