@@ -1,14 +1,18 @@
 body {
     /* background-color: #202030; */
-    background-image: url("https://dima.ovh/bg.jpg");
+    background: light-dark(pink, rgb(139, 74, 85));
     background-position: center;
     background-attachment: fixed;
-    color: aliceblue;
+    color: light-dark(black, aliceblue);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root {
+    color-scheme: light dark;
+}
+
 .main {
-    background-color: rgba(0,0,0, 0);
+    background-color: light-dark(rgba(255,255,255, 0.2),rgba(0,0,0, 0.2));
     padding: 1rem;
     max-width: max-content;
     width: 75%;
@@ -21,10 +25,10 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: light-dark(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
     border-width: 2px;
     border-style:solid;
-    backdrop-filter: blur(30px) brightness(80%);
+    /* backdrop-filter: blur(30px); */
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -36,6 +40,7 @@ h1, .header {
     font-weight: bold;
     display: inline;
 }
+
 img {
     margin-bottom: -0.3rem;
     border-radius: 100%;
@@ -49,14 +54,9 @@ img {
     justify-content: center
 }
 
-.social-icons a {
-
-}
-
-
 i.fa-brands, i.fa-solid {
     font-size: 2rem;
-    color: aliceblue;
+    color: light-dark(black, aliceblue);
     margin:10px;
     transition: all 0.2s ease-out;
 }
@@ -70,10 +70,10 @@ i.fa-brands:hover, i.fa-solid:hover {
     top: 100vh;
     left: 50vw;
     transform: translate(-50%,-150%);
-    background-color: rgba(0,0,0, 0);
+    background-color: light-dark(rgba(255,255,255, 0.2),rgba(0,0,0, 0.2));
     padding: 5px;
-    backdrop-filter: blur(30px) brightness(80%);
-    border-color: rgba(255, 255, 255, 0.2);
+    /* backdrop-filter: blur(30px); */
+    border-color: light-dark(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
     border-width: 2px;
     border-style:solid;
     border-radius: 15px;
@@ -87,12 +87,15 @@ i.fa-brands:hover, i.fa-solid:hover {
     font-size: small;
 }
 
+
 .srclink {
-    color: #aaa;
+    color: light-dark(black, #aaa);
 }
+
 .srclink:visited {
-    color: #aaa;
+    color: light-dark(black, #aaa);
 }
+
 .srclink:active {
     color: #ccc;
 }
