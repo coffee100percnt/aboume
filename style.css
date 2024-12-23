@@ -1,6 +1,6 @@
 body {
     /* background-color: #202030; */
-    background: light-dark(pink, rgb(139, 74, 85));
+    background: light-dark(pink, rgb(42, 120, 63));
     background-position: center;
     background-attachment: fixed;
     color: light-dark(black, aliceblue);
