@@ -66,10 +66,9 @@ i.fa-brands:hover, i.fa-solid:hover {
 }
 
 .footer {
-    position: absolute;
-    top: 100vh;
-    left: 50vw;
-    transform: translate(-50%,-150%);
+    position: fixed;
+    left: 0;
+    bottom: 6px;
     background-color: light-dark(rgba(255,255,255, 0.2),rgba(0,0,0, 0.2));
     padding: 5px;
     /* backdrop-filter: blur(30px); */
