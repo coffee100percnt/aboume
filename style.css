@@ -68,7 +68,7 @@ i.fa-brands:hover, i.fa-solid:hover {
 .footer {
     position: fixed;
     left: 50vw;
-    bottom: 5px;
+    bottom: 15px;
     transform: translate(-50%,0);
     background-color: light-dark(rgba(255,255,255, 0.2),rgba(0,0,0, 0.2));
     padding: 5px;
@@ -82,7 +82,7 @@ i.fa-brands:hover, i.fa-solid:hover {
 }
 
 .footertext {
-    max-width: fit-content;
+    max-width: max-content;
     text-align: center;
     font-size: small;
 }
