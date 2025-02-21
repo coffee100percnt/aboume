@@ -11,8 +11,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css">
     <link rel="shortcut icon" href="pfp.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+    <div id="fill">
+        <h1 id="click">click to enter<br>
+            <span id="warning">WARNING: The background video may potentially trigger seizures for people with photosensitive epilepsy.</span></h1>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#background").on('loadeddata', function() {
+                let video = $("#background").get(0);
+                video.muted =false;
+            });
+            $("#mute").click(function(){
+                let video = $("#background").get(0);
+                if (video.muted) {
+                    video.muted = false;
+                    $(this).find($(".fa-solid")).removeClass("fa-volume-xmark").addClass("fa-volume-high");
+                } else if (!video.muted) {
+                    video.muted = true;
+                    $(this).find($(".fa-solid")).removeClass("fa-volume-high").addClass("fa-volume-xmark");
+                };
+            });
+        });
+        $("#fill").click(function(){
+            $(this).fadeOut(150);
+            let video = $("#background").get(0);
+            video.play();
+        });
+        
+    </script>
+    <div id="mute">
+        <i class="fa-solid fa-volume-high fa-fixed-width"></i>
+    </div>
     <div class="main">
         <div class="header"><img src="pfp.png" width="35px" class="pfp"><h1>dima</h1></div>
         <p id="bio"></p>
@@ -40,7 +72,7 @@
             </a>
         </div>
     </div>
-
-    <div class="footer"><p class="footertext">source code of this page is available <a class="srclink" href="http://github.com/coffee100percnt/aboume">here</a></p></div>
+    <video src="mayhem.mp4" id="background"></video>
+    <div class="footer"><p class="footertext">The background video is not owned or made by me. <a href="https://youtu.be/28_K3XAov2I">Link to original video</a><br>source code of this page is available <a class="srclink" href="http://github.com/coffee100percnt/aboume">here</a></p></div>
 </body>
 </html>

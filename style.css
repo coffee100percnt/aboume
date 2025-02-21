@@ -1,6 +1,6 @@
 body {
     /* background-color: #202030; */
-    background: light-dark(pink, rgb(42, 120, 63));
+    background: light-dark(rgba(255, 192, 203, 0), rgba(42, 120, 63, 0));
     background-position: center;
     background-attachment: fixed;
     color: light-dark(black, aliceblue);
@@ -11,15 +11,36 @@ body {
     color-scheme: light dark;
 }
 
+#fill {
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(0,0,0, 0.2);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#background {
+    z-index: -100;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+
+}
 .main {
     background-color: light-dark(rgba(255,255,255, 0.2),rgba(0,0,0, 0.2));
     padding: 1rem;
     max-width: max-content;
     width: 75%;
-    margin-top: 50vh;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translate(0,-50%);
     border-radius: 2rem;
     display:flex;
     align-items: center;
@@ -28,7 +49,40 @@ body {
     border-color: light-dark(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
     border-width: 2px;
     border-style:solid;
-    /* backdrop-filter: blur(30px); */
+    backdrop-filter: blur(30px);
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    margin-right: auto;
+    transform: translate(-50%,-50%);
+}
+
+#mute {
+    background-color: light-dark(rgba(255,255,255, 0.2),rgba(0,0,0, 0.2));
+    padding: 1.5rem;
+    max-width: max-content;
+    width: 75%;
+    border-radius: 2rem;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-color: light-dark(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+    border-width: 2px;
+    border-style:solid;
+    backdrop-filter: blur(30px);
+}
+
+i.fa-volume-high, i.fa-volume-xmark {
+
+}
+
+#click {
+    text-align: center;
+}
+
+#warning {
+    color:#ff000079;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -54,7 +108,7 @@ img {
     justify-content: center
 }
 
-i.fa-brands, i.fa-solid {
+i.fa-brands, i.fa-envelope {
     font-size: 2rem;
     color: light-dark(black, aliceblue);
     margin:10px;
