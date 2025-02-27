@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kitten</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <img src="" alt="" id="kitty">
+    <script>
+        const kitty = document.getElementById("kitty");
+        fetch("https://api.thecatapi.com/v1/images/search")
+        .then(response => response.json())
+        .then(data => {
+            kitty.src = data[0].url;
+            kitty.width = data[0].width;
+            kitty.height = data[0].height;
+        });
+    </script>
+</body>
+</html>
